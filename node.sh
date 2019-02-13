@@ -1,3 +1,5 @@
+echo 该脚本仅限12138私人使用！
+echo 按任意键继续 read -n 1
 yum install python-setuptools && easy_install pip
 yum install git
 yum -y groupinstall "Development Tools"
@@ -12,7 +14,10 @@ yum -y install python-devel
 yum -y install libffi-devel
 yum -y install openssl-devel
 pip install -r requirements.txt
+systemctl stop firewalld.service
+systemctl disable firewalld.service
 vi userapiconfig.py
 cd shadowsocks
 python server.py
 bash run.sh
+echo 恭喜！又一个节点配置成功啦!
