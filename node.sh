@@ -1,3 +1,5 @@
+echo auto-node  only Centos!
+echo 按任意键继续 read -n 1
 echo 该脚本仅限12138私人使用！
 echo 按任意键继续 read -n 1
 yum install python-setuptools && easy_install pip
