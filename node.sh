@@ -26,3 +26,4 @@ sleep 5
 python server.py
 systemctl stop firewalld.service
 systemctl disable firewalld.service
+cd shadowsocks
