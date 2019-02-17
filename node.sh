@@ -1,5 +1,3 @@
-systemctl stop firewalld.service
-systemctl disable firewalld.service
 yum install python-setuptools && easy_install pip
 yum install git
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/libsodium.sh && chmod +x libsodium.sh && bash libsodium.sh
