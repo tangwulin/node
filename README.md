@@ -8,3 +8,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/tangwulin/node/
 systemctl stop firewalld.service
 systemctl disable firewalld.service
 ```
+#### 开机自启：
+``` bash
+wget -N --no-check-certificate https://raw.githubusercontent.com/tangwulin/node/master/settingautostart.sh && chmod +x settingautostart.sh && bash settingautostart.sh
+```
