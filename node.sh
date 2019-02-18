@@ -16,3 +16,7 @@ tar xf libsodium-1.0.10.tar.gz && cd libsodium-1.0.10
 ./configure && make -j2 && make install
 echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 ldconfig
+sleep 2
+systemctl stop firewalld.service
+systemctl disable firewalld.service
+wget -N --no-check-certificate https://raw.githubusercontent.com/tangwulin/node/master/settingautostart.sh && chmod +x settingautostart.sh && bash settingautostart.sh
