@@ -19,4 +19,8 @@ ldconfig
 sleep 2
 systemctl stop firewalld.service
 systemctl disable firewalld.service
-wget -N --no-check-certificate https://raw.githubusercontent.com/tangwulin/node/master/settingautostart.sh && chmod +x settingautostart.sh && bash settingautostart.sh
+chmod +x /etc/rc.d/rc.local
+echo "/root/shadowsocks/run.sh">>/etc/rc.d/rc.local
+echo "nameserver 1.1.1.1">>/etc/resolv.conf
+echo "nameserver 8.8.8.8">>/etc/resolv.conf
+
