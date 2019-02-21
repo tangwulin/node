@@ -23,6 +23,8 @@ chmod +x /etc/rc.d/rc.local
 echo "/root/shadowsocks/run.sh">>/etc/rc.d/rc.local
 echo "nameserver 1.1.1.1">>/etc/resolv.conf
 echo "nameserver 8.8.8.8">>/etc/resolv.conf
+cd /root/shadowsocks/
+bash run.sh
 
 
 
