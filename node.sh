@@ -32,7 +32,8 @@ systemctl disable firewalld.service
 chmod +x /etc/rc.d/rc.local
 echo "/root/shadowsocks/run.sh">>/etc/rc.d/rc.local
 #5分钟启动一次节点，以防开机自启失败
-crontab "*/5 * * * * \"/root/shadowsocks/run.sh\""
+echo "*/5 * * * * /root/shadowsocks/run.sh >> /tmp/tmp.txt" >> /var/spool/cron/root
+#更换
 echo "nameserver 1.1.1.1">>/etc/resolv.conf
 echo "nameserver 8.8.8.8">>/etc/resolv.conf
 #最后启动一次
