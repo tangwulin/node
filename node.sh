@@ -36,7 +36,6 @@ echo "/root/shadowsocks/run.sh">>/etc/rc.d/rc.local
 crontab "*/5 * * * * \"/root/shadowsocks/run.sh\""
 echo "nameserver 1.1.1.1">>/etc/resolv.conf
 echo "nameserver 8.8.8.8">>/etc/resolv.conf
-crontab "*/5 * * * * \"/root/shadowsocks/run.sh\""
 #最后启动一次
 cd /root/shadowsocks/
 bash run.sh
