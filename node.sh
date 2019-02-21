@@ -1,4 +1,3 @@
-stty -echo
 echo 安装基础工具包
 sleep 2
 yum install python-setuptools && easy_install pip
