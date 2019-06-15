@@ -1,10 +1,10 @@
 clear
 yum install -y screen
 clear
-如中途离开，请使用screen -r node_install回到当前会话
+echo 如中途离开，请使用screen -r node_install回到当前会话
 sleep 5
 #创建一个screen会话
-screen -S node_install
+screen -U -S node_install
 echo 安装基础工具包
 sleep 2
 yum install python-setuptools && easy_install pip
