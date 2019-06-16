@@ -18,6 +18,7 @@ yum -y install openssl-devel
 pip install -r requirements.txt
 clear
 echo 准备设置配置文件……
+sleep 5
 vi userapiconfig.py
 sleep 2
 clear
