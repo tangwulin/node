@@ -24,7 +24,8 @@ sleep 2
 clear
 echo 安装Libsodium库
 cd shadowsocks
-yum -y groupinstall "Development Tools" && wget https://github.com/jedisct1/libsodium/releases/download/1.0.10/libsodium-1.0.10.tar.gz && tar xf libsodium-1.0.10.tar.gz && cd libsodium-1.0.10 &&configure && make -j2 && make install && echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf &&ldconfig
+yum install libsodium -y
+##yum -y groupinstall "Development Tools" && wget https://github.com/jedisct1/libsodium/releases/download/1.0.10/libsodium-1.0.10.tar.gz && tar xf libsodium-1.0.10.tar.gz && cd libsodium-1.0.10 &&configure && make -j2 && make install && echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf &&ldconfig
 sleep 2
 clear
 echo 关闭防火墙
