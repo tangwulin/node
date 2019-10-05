@@ -1,5 +1,3 @@
-echo 切换至root用户
-sudo -i
 clear
 echo 安装基础工具包
 sleep 2
