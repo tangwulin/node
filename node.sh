@@ -1,8 +1,10 @@
+echo 切换至root用户
+sudo -i
 clear
 echo 安装基础工具包
 sleep 2
-yum install python-setuptools && easy_install pip
-yum install git
+yum install python-setuptools && easy_install pip -y
+yum install git -y
 clear
 echo 从Git下载主文件
 sleep 2
@@ -12,9 +14,9 @@ clear
 echo 安装运行环境
 sleep 2
 cd shadowsocks
-yum -y install python-devel
-yum -y install libffi-devel
-yum -y install openssl-devel
+yum install python-devel -y
+yum install libffi-devel -y -y
+yum install openssl-devel -y
 pip install -r requirements.txt
 clear
 echo 准备设置配置文件……
@@ -37,10 +39,12 @@ echo 设置开机自启和守护
 chmod +x /etc/rc.d/rc.local
 echo "/root/shadowsocks/run.sh">>/etc/rc.d/rc.local
 #5分钟启动一次节点，以防开机自启失败
-echo "*/5 * * * * /root/shadowsocks/run.sh >> /tmp/tmp.txt" >> /var/spool/cron/root
+echo "*/5 * * * * /root/shadowsocks/run.sh" >> /var/spool/cron/root
 clear
 echo 更换DNS
 #更换DNS
+rm -rf /etc/resolv.conf
+touch /etc/resolv.conf
 echo "nameserver 1.1.1.1">>/etc/resolv.conf
 echo "nameserver 8.8.8.8">>/etc/resolv.conf
 clear
